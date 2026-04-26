@@ -9,7 +9,7 @@ pnpm install
 pnpm dev
 ```
 
-Be sure to use the correct version of yarn specified in package.json.
+Be sure to use the correct version of pnpm specified in package.json.
 
 Then there would be multiple entries to choose from:
 
