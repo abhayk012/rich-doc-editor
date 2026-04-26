@@ -114,7 +114,7 @@ To that end, the BlockSuite project is structured around key packages that are c
 - 🚚 Resources
   - [Canary Playground](https://try-blocksuite.vercel.app/starter/?init)
   - [Examples](./examples/)
-  - [BlockSuite in StackBlitz](https://stackblitz.com/github/toeverything/blocksuite)
+  - [BlockSuite in StackBlitz](https://stackblitz.com/github/toeverything/blocksuite?startCommand=pnpm%20run%20dev)
   - [Testing Real-Time Collaboration](https://github.com/toeverything/blocksuite/blob/main/BUILDING.md#test-collaboration)
   - [BlockSuite Ecosystem CI](https://github.com/toeverything/blocksuite-ecosystem-ci)
   - [Vue-based BlocksVite Editor](https://github.com/zuozijian3720/blocksvite)

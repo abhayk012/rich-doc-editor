@@ -37,8 +37,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --no-frozen-lockfile
-          yarn dedupe
+          pnpm install --no-frozen-lockfile
+          pnpm dedupe
 
       - name: Commit and Push Changes
         run: |

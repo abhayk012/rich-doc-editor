@@ -38,7 +38,7 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Run format check
-        run: yarn lint:format
+        run: pnpm lint:format
 
   build:
     name: Build
@@ -52,10 +52,10 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Check dedupe
-        run: yarn dedupe --check
+        run: pnpm dedupe --check
 
       - name: Run build
-        run: yarn build
+        run: pnpm build
 
   build-and-test:
     if: ${{ always() }}

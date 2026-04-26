@@ -26,7 +26,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: yarn ci:version
+          version: pnpm ci:version
           commit: 'chore: version packages'
           title: 'chore: version packages'
           createGithubReleases: false
@@ -42,15 +42,13 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Build packages
-        run: yarn build:packages
+        run: pnpm build:packages
 
       - name: Publish to NPM
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          yarn config set npmAuthToken ${{ secrets.NPM_TOKEN }}
-          yarn ci:publish
+          pnpm ci:publish
           rm ".npmrc"
-          yarn config unset npmAuthToken
 
       - name: Get package version
         run: |

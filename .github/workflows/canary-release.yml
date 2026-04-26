@@ -24,15 +24,13 @@ jobs:
         run: cp .github/snapshot-changeset.md .changeset/
 
       - name: Update package version
-        run: yarn ci:version:canary
+        run: pnpm ci:version:canary
 
       - name: Build packages
-        run: yarn build:packages
+        run: pnpm build:packages
 
       - name: Publish to NPM
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          yarn config set npmAuthToken ${{ secrets.NPM_TOKEN }}
-          yarn ci:publish:canary
+          pnpm ci:publish:canary
           rm ".npmrc"
-          yarn config unset npmAuthToken
